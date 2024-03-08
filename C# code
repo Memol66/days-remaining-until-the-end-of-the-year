@@ -1,0 +1,16 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Get the current date
+        DateTime currentDate = DateTime.Today;
+        
+        // Calculate remaining days in the current year
+        int daysInYear = DateTime.IsLeapYear(currentDate.Year) ? 366 : 365;
+        int daysRemaining = daysInYear - currentDate.DayOfYear;
+
+        Console.WriteLine("Remaining days until the end of the year: " + daysRemaining);
+    }
+}
